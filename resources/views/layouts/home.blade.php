@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin</title>
-    <link href="{{asset('public/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/css/datepicker3.css')}}" rel="stylesheet">
-    <link href="{{asset('public/css/styles.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/datepicker3.css')}}" rel="stylesheet">
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -53,10 +53,10 @@
     </div>
 </body>
 
-<script src="{{asset('public/js/jquery-1.11.1.min.js')}}"></script>
-<script src="{{asset('public/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('public/js/bootstrap-datepicker.js')}}"></script>
-<script src="{{asset('public/js/custom.js')}}"></script>
+<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 
 </html>
 

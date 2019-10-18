@@ -2,15 +2,15 @@
 @section('content')
     <section class="main-section">
         <div class="content">
-            <h2><b>List Bank Sampah</b></h2>
+            <h2><b>Daftar Bank Sampah</b></h2>
             <hr>
              <div class="pull-left">
-                <a class="btn btn-success" href="{{ url('/createsampah') }}"> Create Bank Sampah</a>
+                <a class="btn btn-success" href="{{ url('/createsampah') }}"> Tambah Bank Sampah</a>
             </div>       
         </div>
 
         <div style="float: right;">
-            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Search">
+            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Cari">
             <button style="height: 30px;" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <br><br>
@@ -26,15 +26,15 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Telephone</th>
-                    <th>Sticker</th>
+                    <th>Telepon</th>
+                    <th>Stiker</th>
                     <th>Botol Besar</th>
                     <th>Botol Medium</th>
                     <th>Gelas Plastik</th>
                     <th>Jumlah Botol</th>
-                    <th>Latitude</th>
-                    <th>Longtitude</th>
-                    <th width="220px">Action</th>
+                    <th><i>Latitude</i></th>
+                    <th><i>Longtitude</i></th>
+                    <th width="220px">Aksi</th>
                 </tr>
             </thead>
 
@@ -53,11 +53,11 @@
                     <td>{{ $data->longtitude }}</td>
                     <td>
                         <form action="{{url('/deletesampah',$data->id_banksampah)}}" method="POST">
-                            <a class="btn btn-info" href="{{ url('/showsampah?user_id_banksampah=')}}{{$data->user_id_banksampah}}">History</a>
+                            <a class="btn btn-info" href="{{ url('/showsampah?user_id_banksampah=')}}{{$data->user_id_banksampah}}">Riwayat</a>
                             <a class="btn btn-primary" href="{{ url('/editsampah',$data->id_banksampah) }}">Edit</a>
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger" href="{{ url('/deletesampah',$data->id_banksampah) }}">Delete</a>
+                            <a class="btn btn-danger" href="{{ url('/deletesampah',$data->id_banksampah) }}">Hapus</a>
                         </form>
                     </td>
                 </tr>

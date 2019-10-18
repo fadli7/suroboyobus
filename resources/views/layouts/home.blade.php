@@ -26,13 +26,13 @@
             <div class="clear"></div>
         </div>
         <ul class="nav menu">
-            <li><a href="{{url('/homeweb')}}"><em class="fa fa-home">&nbsp;</em> Home</a></li>
+            <li><a href="{{url('/homeweb')}}"><em class="fa fa-home">&nbsp;</em> Beranda</a></li>
             <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-                <em class="fa fa-navicon">&nbsp;</em> Users <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                <em class="fa fa-navicon">&nbsp;</em> Pengguna <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
                 </a>
                 <ul class="children collapse" id="sub-item-1">
                     <li><a href="{{url('/homeuser')}}">
-                        <span class="glyphicon glyphicon-user"></span> All User
+                        <span class="glyphicon glyphicon-user"></span> Semua Pengguna
                     </a></li>
                     <li><a href="{{url('/homehelper')}}">
                         <span class="glyphicon glyphicon-user"></span> Helper
@@ -42,6 +42,7 @@
                     </a></li>
                 </ul>
             </li>
+            <li><a href="{{url('/getTopupSticker')}}"><span class="glyphicon fa fa-list"></span> Daftar Isi Saldo</a></li>
             <li><a href="{{url('/homesampah')}}"><span class="glyphicon glyphicon-trash"></span> Bank Sampah</a></li>
             <li><a href="{{url('/homebus')}}"><span class="glyphicon fa fa-bus"></span> Suroboyo Bus</a></li>
             <li><a href="{{url('/logout')}}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>

@@ -5,7 +5,7 @@
             <div class="row">
                  <div class="col-lg-12 margin-tb">
                      <div class="pull-left">
-                        <h2><b>Add Helper</b></h2>
+                        <h2><b>Tambah Helper</b></h2>
                         <hr>
                     </div>
                 </div>
@@ -44,14 +44,14 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Telephone:</strong>
+                        <strong>Telepon:</strong>
                         <input type="text" name="telp_helper" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Password:</strong>
+                        <strong>Kata Sandi:</strong>
                         <input type="text" name="password_helper" class="form-control">
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     <br>
                     <div class="form-group">
                         <select class="form-control m-bot15" name="role_id">
-                            <option><b>Select User<b></option>
+                            <option><b>Pilih Level Pengguna<b></option>
                             @if($roles->count() > 0)
                                 @foreach($roles as $role)
                                     <option value="{{$role->role_id}}">{{$role->level}}</option>
@@ -73,8 +73,8 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <a class="btn btn-primary" href="{{ url('/homehelper') }}"> Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-primary" href="{{ url('/homehelper') }}"> Kembali</a>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
 
             </div>

@@ -47,7 +47,7 @@
                 </table>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <a class="btn btn-primary" href="{{url('/homebus')}}"> Back</a>
+                    <a class="btn btn-primary" href="{{url('/homebus')}}"> Kembali</a>
                 </div>
 
             </div>

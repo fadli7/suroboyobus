@@ -106,7 +106,7 @@
     <section class="main-section">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><b>Add Bank Sampah</b></h2>
+                <h2 class="page-header"><b>Tambah Bank Sampah</b></h2>
             </div>
         </div>
 
@@ -170,21 +170,21 @@
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <strong>Password:</strong>
+                        <strong>Kata Sandi:</strong>
                         <input type="text" name="password_banksampah" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <strong>Telephone:</strong>
+                        <strong>Telepon:</strong>
                         <input type="text" name="telp_banksampah" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <strong>Add Sticker:</strong>
+                        <strong>Jumlah Stiker Awal:</strong>
                         <input type="text" name="sticker_banksampah" class="form-control">
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                     <br>
                     <div class="form-group">
                         <select class="form-control m-bot15" name="role_id">
-                            <option><b>Select User<b></option>
+                            <option><b>Pilih Level Pengguna<b></option>
                             @if($roles->count() > 0)
                                 @foreach($roles as $role)
                                     <option value="{{$role->role_id}}">{{$role->level}}</option>
@@ -208,8 +208,8 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-right">
                     <br>
-                    <a class="btn btn-primary" href="{{ url('/homesampah') }}"> Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-primary" href="{{ url('/homesampah') }}"> Kembali</a>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </div>
         </form>

@@ -2,12 +2,12 @@
 @section('content')
     <section class="main-section">
         <div class="content">
-            <h2><b>List Penumpang</b></h2>
+            <h2><b>Daftar Penumpang</b></h2>
             <hr>       
         </div>
 
         <div style="float: right;" >
-            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Search">
+            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Cari">
             <button style="height: 30px;" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <br><br>
@@ -23,8 +23,8 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Telephone</th>
-                    <th>Sticker</th>
+                    <th>Telepon</th>
+                    <th>Stiker</th>
                 </tr>
             </thead>
             

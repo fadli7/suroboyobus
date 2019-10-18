@@ -4,13 +4,13 @@
         <div class="content">
             <h2><b>Daftar Isi Saldo</b></h2>
             <hr>
-             <div class="pull-left">
+             {{-- <div class="pull-left">
                 <a class="btn btn-success" href="{{ url('/createbus') }}"> Create Bus</a>
-            </div>       
+            </div>        --}}
         </div>
 
         <div style="float: right;">
-            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Search">
+            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Cari">
             <button style="height: 30px;" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <br><br>

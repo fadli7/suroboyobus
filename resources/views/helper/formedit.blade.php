@@ -35,14 +35,14 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Telephone:</strong>
+                        <strong>Telepon:</strong>
                         <input type="text" name="telp_helper" value="{{$data->telp_helper}}" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <a class="btn btn-primary" href="{{url('/homehelper')}}"> Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-primary" href="{{url('/homehelper')}}"> Kembali</a>
+                    <button type="submit" class="btn btn-primary"> Kirim</button>
                 </div>
             </div>
         </form>       

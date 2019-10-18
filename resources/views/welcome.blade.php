@@ -63,7 +63,7 @@
                     <div class="row no-padding"><em class="fa fa-xl fa-ticket color-blue"></em>
                         <div class="large"><?php echo count($permintaan);?> </div>
                         <div class="text-muted">
-                            Permintaan Sticker <br><br>
+                            Permintaan Stiker <br><br>
                             <span style="font-size: 15px;" class="label label-warning">New</span>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                 <div class="panel panel-orange panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-user color-teal"></em>
                         <div class="large"><?php echo count($user);?></div>
-                            <div class="text-muted">Jumlah User</div>
+                            <div class="text-muted">Jumlah Pengguna</div>
                     </div>
                 </div>
             </div>

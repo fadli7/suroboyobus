@@ -23,9 +23,9 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Penumpang</th>
-                    <th>Send Sticker</th>
+                    <th>Stiker</th>
                     <th>Tanggal/Waktu</th>
-                    <th width="170px">Action</th>
+                    <th width="170px">Aksi</th>
                 </tr>
             </thead>
 
@@ -40,7 +40,7 @@
                         <form action="{{url('/deletehelper',$data->id_helper)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger" href="{{ url('/deletehelper',$data->id_helper) }}">Delete</a>
+                            <a class="btn btn-danger" href="{{ url('/deletehelper',$data->id_helper) }}">Hapus</a>
                         </form>
                     </td>
                 </tr>

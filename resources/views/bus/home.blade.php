@@ -2,15 +2,15 @@
 @section('content')
     <section class="main-section">
         <div class="content">
-            <h2><b>List Suroboyo Bus</b></h2>
+            <h2><b>Daftar Suroboyo Bus</b></h2>
             <hr>
              <div class="pull-left">
-                <a class="btn btn-success" href="{{ url('/createbus') }}"> Create Bus</a>
+                <a class="btn btn-success" href="{{ url('/createbus') }}"> Tambah Bus</a>
             </div>       
         </div>
 
         <div style="float: right;">
-            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Search">
+            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Cari">
             <button style="height: 30px;" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <br><br>
@@ -31,7 +31,7 @@
                     <th>Warna</th>
                     <th>Plat Nomor</th>
                     <th>Pengguna</th>
-                    <th width="280px">Action</th>
+                    <th width="280px">Aksi</th>
                 </tr>
             </thead>
             
@@ -47,10 +47,10 @@
                     <td>{{ $data->pengguna }}</td>
                     <td>
                         <form action="{{url('/deletebus',$data->id_bus)}}" method="POST">
-                            <a class="btn btn-info" href="{{ url('/showbus',$data->id_bus) }}">Show</a>
+                            <a class="btn btn-info" href="{{ url('/showbus',$data->id_bus) }}">Tampil</a>
                             <a class="btn btn-primary" href="{{ url('/editbus',$data->id_bus) }}">Edit</a>
                             @csrf
-                            <a class="btn btn-danger" href="{{ url('/deletebus',$data->id_bus) }}">Delete</a>
+                            <a class="btn btn-danger" href="{{ url('/deletebus',$data->id_bus) }}">Hapus</a>
                         </form>
                     </td>
                 </tr>

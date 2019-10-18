@@ -42,14 +42,14 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Telephone:</strong>
+                        <strong>Telepon:</strong>
                         <input type="text" name="telp_banksampah" value="{{$data->telp_banksampah}}" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Add Sticker:</strong>
+                        <strong>Stiker:</strong>
                         <input type="text" name="sticker_banksampah" value="{{$data->sticker_banksampah}}" class="form-control">
                     </div>
                 </div>
@@ -69,8 +69,8 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <a class="btn btn-primary" href="{{url('/homesampah')}}"> Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-primary" href="{{url('/homesampah')}}"> Kembali</a>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </div>
         </form>       

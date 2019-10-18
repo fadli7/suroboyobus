@@ -2,12 +2,12 @@
 @section('content')
     <section class="main-section">
         <div class="content">
-            <h2><b>History Transaksi Sampah</b></h2>
+            <h2><b>Riwayat Transaksi Sampah</b></h2>
             <hr>      
         </div>
 
         <div style="float: right;">
-            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Search">
+            <input style="height: 30px; width: 200px" id="myInput" type="text" placeholder="Cari">
             <button style="height: 30px;" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <br><br>
@@ -23,12 +23,12 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Penumpang</th>
-                    <th>Send Sticker</th>
+                    <th>Stiker</th>
                     <th>Botol Besar</th>
                     <th>Botol Medium</th>
                     <th>Gelas Plastik</th>
                     <th>Tanggal/Waktu</th>
-                    <th width="170px">Action</th>
+                    <th width="170px">Aksi</th>
                 </tr>
             </thead>
 
@@ -46,7 +46,7 @@
                         <form action="{{url('/deletesampah',$data->id_banksampah)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger" href="{{ url('/deletesampah',$data->id_banksampah) }}">Delete</a>
+                            <a class="btn btn-danger" href="{{ url('/deletesampah',$data->id_banksampah) }}">Hapus</a>
                         </form>
                     </td>
                 </tr>

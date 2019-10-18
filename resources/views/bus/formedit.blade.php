@@ -69,8 +69,8 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <a class="btn btn-primary" href="{{url('/homebus')}}"> Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-primary" href="{{url('/homebus')}}"> Kembali</a>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </div>
         </form>       

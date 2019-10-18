@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelHelper extends Model
 {
-   protected $table = 'helper';
-   protected $primaryKey = 'id_helper';
+    protected $table = 'helper';
+    protected $primaryKey = 'id_helper';
 
     public function get_user()
     {

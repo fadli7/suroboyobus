@@ -42,6 +42,9 @@ Route::get('/deletehelper/{id}', 'HelperController@delete');
 Route::get('/homepenumpang', 'PenumpangController@index');
 Route::get('/showpenumpang/{id}', 'PenumpangController@show');
 
+Route::get('/getTopupSticker', 'TopupController@getTopupSticker');
+Route::get('/accept-topup/{id_topup}/{id_user}', 'TopupController@getAcceptTopupSticker');
+Route::get('/reject-topup/{id_topup}', 'TopupController@getRejectTopupSticker');
 
 
 

@@ -11,6 +11,8 @@ use App\ModelUser;
 use App\ModelTopUp;
 use Validator;
 use App\Http\Controllers\Controller;
+use Log;
+
 
 class BankSampahController extends Controller
 {   
@@ -135,27 +137,29 @@ class BankSampahController extends Controller
     public function topup(Request $request)
     {   
         $topupData = new ModelTopUp();
-        $topupData->user_id_banksampah = $request->input('user_id_banksampah'); 
+        $topupData->user_id_banksampah = $request->input('user_id_banksampah');
         $topupData->sticker_topup = $request->input('sticker_topup');
+        $topupData->status = $request->input('status');
 
         //menampilkan jumlah sticker banksampah setelah topup
         $banksampahData = ModelBankSampah::where(['user_id_banksampah' => $request->input('user_id_banksampah')])->first();
-        $banksampahData->sticker_banksampah = $banksampahData->sticker_banksampah + $request->input('sticker_topup');
+        // Log::info($banksampahData);
+        // $banksampahData->sticker_banksampah = $banksampahData->sticker_banksampah + $request->input('sticker_topup');
 
         $topupData->save();
         $topupData->datetime = $topupData->created_at;
         $banksampahData->save();
 
         $response = [
-                'code' => 200,
-                'message' => 'Top Up Berhasil',
-                'success' => true,
-                'data' => [
-                        'topup' => $topupData,
-                        'banksampah' => $banksampahData
-                    ]
-            ];
-            return response()->json($response);
+            'code' => 200,
+            'message' => 'Top Up Berhasil',
+            'success' => true,
+            'data' => [
+                    'topup' => $topupData,
+                    'banksampah' => $banksampahData
+                ]
+        ];
+        return response()->json($response);
     }
 
     //halaman history top up 

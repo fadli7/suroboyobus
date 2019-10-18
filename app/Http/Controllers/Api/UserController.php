@@ -29,11 +29,12 @@ class UserController extends Controller
         $data->save();
 
         $response = [
-                'code' => 200,
-                'message' => 'Register Berhasil',
-                'success' => true,
-            ];
-            return response()->json($response);
+            'code' => 200,
+            'message' => 'Register Berhasil',
+            'success' => true,
+        ];
+        
+        return response()->json($response);
     }
 
     public function login(Request $request)

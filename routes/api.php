@@ -8,7 +8,7 @@ Route::get('/penumpang/profile','Api\PenumpangController@profile');
 Route::get('/penumpang/historytukarsampah','Api\PenumpangController@historytukarsampah');
 Route::get('/penumpang/historynaikbus','Api\PenumpangController@historynaikbus');
 
-Route::post('/banksampah','Api\BankSampahController@getbanksampah'); 
+Route::post('/banksampah','Api\BankSampahController@getbanksampah');
 Route::post('/banksampah/tukarsampah','Api\BankSampahController@tukarsampah'); 
 Route::get('/banksampah/historytukarsampah','Api\BankSampahController@historytukarsampah');
 Route::post('/banksampah/topup','Api\BankSampahController@topup');

@@ -60,13 +60,26 @@
         <div class="row">
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-teal panel-widget border-right">
-                    <div class="row no-padding"><em class="fa fa-xl fa-map-marker color-blue"></em>
+                    <div class="row no-padding"><em class="fa fa-xl fa-ticket color-blue"></em>
+                        <div class="large"><?php echo count($permintaan);?> </div>
+                        <div class="text-muted">
+                            Permintaan Sticker <br><br>
+                            <span style="font-size: 15px;" class="label label-warning">New</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3 col-lg-2.4 no-padding">
+                <div class="panel panel-teal panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-map-marker color-red"></em>
                         <div class="large"><?php echo count($data);?></div>
                         <div class="text-muted">Bank Sampah</div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            
+            <!--
+            <div class="col-xs-6 col-md-3 col-lg-2.4 no-padding">
                 <div class="panel panel-blue panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-bus color-orange"></em>
                         <div class="large"><?php echo count($jml_bus);?></div>
@@ -74,9 +87,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            -->
+
+            <div class="col-xs-6 col-md-3 col-lg-2.4 no-padding">
                 <div class="panel panel-teal panel-widget border-right">
-                    <div class="row no-padding"><em class="fa fa-xl fa-trash color-blue"></em>
+                    <div class="row no-padding"><em class="fa fa-xl fa-trash color-orange"></em>
                         <div class="large"><?php $jml_sampah = 0;
                                                 foreach($data as $item=>$value){
                                                     $jml_sampah +=$value['sampah_banksampah'];
@@ -85,7 +100,7 @@
                     </div>
                 </div>
             </div>
-             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+             <div class="col-xs-6 col-md-3 col-lg-2.4 no-padding">
                 <div class="panel panel-orange panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-user color-teal"></em>
                         <div class="large"><?php echo count($user);?></div>

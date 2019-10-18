@@ -49,6 +49,11 @@ class ModelUser extends Model
         return $this->hasOne('App\ModelBankSampah', 'user_id_banksampah', 'id_banksampah');
     }
 
+    public function get_detail_banksampah()
+    {
+        return $this->hasOne('App\ModelBankSampah', 'user_id_banksampah', 'user_id');
+    }
+
     public function get_bus()
     {
         return $this->hasOne('App\ModelBankSampah', 'user_id', 'id_bus');

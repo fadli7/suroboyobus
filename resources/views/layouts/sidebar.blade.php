@@ -45,6 +45,7 @@
                     </a></li>
                 </ul>
             </li>
+            <li><a href="{{url('/getTopupSticker')}}"><span class="glyphicon fa fa-list"></span> Daftar Isi Saldo</a></li>
             <li><a href="{{url('/homesampah')}}"><span class="glyphicon glyphicon-trash"></span> Bank Sampah</a></li>
             <li><a href="{{url('/homebus')}}"><span class="glyphicon fa fa-bus"></span> Suroboyo Bus</a></li>
             <li><a href="{{url('/logout')}}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>

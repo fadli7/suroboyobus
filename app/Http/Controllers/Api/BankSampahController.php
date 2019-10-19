@@ -153,7 +153,7 @@ class BankSampahController extends Controller
 
         $response = [
             'code' => 200,
-            'message' => 'Top Up Berhasil',
+            'message' => 'Top Up Berhasil Diproses',
             'success' => true,
             'data' => [
                     'topup' => $topupData,

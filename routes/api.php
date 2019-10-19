@@ -21,7 +21,3 @@ Route::get('/helper/profile','Api\HelperController@profile');
 
 Route::post('/user/register','Api\UserController@register');
 Route::post('/user/login','Api\UserController@login');
-
-
-
-

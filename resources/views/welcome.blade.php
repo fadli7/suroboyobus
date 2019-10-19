@@ -100,6 +100,7 @@
                     </div>
                 </div>
             </div>
+            
              <div class="col-xs-6 col-md-3 col-lg-2.4 no-padding">
                 <div class="panel panel-orange panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-user color-teal"></em>

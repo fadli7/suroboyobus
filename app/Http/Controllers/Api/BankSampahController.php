@@ -89,6 +89,7 @@ class BankSampahController extends Controller
         $tukarsampahData['user_id_banksampah']  = $request->request->get('user_id_banksampah');
         $tukarsampahData = ModelTukarSampah::where(['user_id_banksampah' => $userId])
         ->with(['get_penumpang'])
+        ->orderBy('created_at', 'desc')
         ->get();
 
         $response = [
@@ -177,7 +178,9 @@ class BankSampahController extends Controller
         }
 
         $topupData['user_id_banksampah']  = $request->request->get('user_id_banksampah');
-        $topupData = ModelTopUp::where(['user_id_banksampah' => $userId])->get();
+        $topupData = ModelTopUp::where(['user_id_banksampah' => $userId])
+            ->orderBy('updated_at', 'desc')
+            ->get();
 
         $response = [
                 'code' => 200,

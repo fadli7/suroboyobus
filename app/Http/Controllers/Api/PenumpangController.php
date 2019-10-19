@@ -47,7 +47,7 @@ class PenumpangController extends Controller
     }
 
     //data untuk halaman history tukarsampah
-    public function historytukarsampah(Request $request){
+    public function historytukarsampah(Request $request) {
         $userId = $request->input('user_id');
         if(is_null($userId)){
             $response = [
@@ -62,6 +62,7 @@ class PenumpangController extends Controller
         $tukarsampahData['user_id_penumpang']  = $request->request->get('user_id_penumpang');
         $tukarsampahData = ModelTukarSampah::where(['user_id_penumpang' => $userId])
         ->with(['get_banksampah'])
+        ->orderBy('created_at', 'desc')
         ->get();
 
         $response = [
@@ -88,6 +89,7 @@ class PenumpangController extends Controller
         $naikbusData['user_id_penumpang']  = $request->request->get('user_id_penumpang');
         $naikbusData = ModelNaikBus::where(['user_id_penumpang' => $userId])
         ->with(['get_helper'])
+        ->orderBy('created_at', 'desc')
         ->get();
 
         $response = [

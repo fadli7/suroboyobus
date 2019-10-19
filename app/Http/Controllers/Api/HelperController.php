@@ -68,6 +68,7 @@ class HelperController extends Controller
         $naikbusData['user_id_helper']  = $request->request->get('user_id_helper');
         $naikbusData = ModelNaikBus::where(['user_id_helper' => $userId])
         ->with(['get_penumpang'])
+        ->orderBy('created_at', 'desc')
         ->get();
 
         $response = [

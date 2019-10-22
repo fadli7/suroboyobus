@@ -19,12 +19,16 @@ class HelperController extends Controller
     public function naikbus(Request $request)
     {   
         $naikbusData = new ModelNaikBus();
-        $naikbusData->user_id_penumpang = $request->input('user_id_penumpang'); 
+        // $naikbusData->user_id_penumpang = $request->input('user_id_penumpang'); 
         $naikbusData->user_id_helper = $request->input('user_id_helper');
         $naikbusData->sticker_naikbus = $request->input('sticker_naikbus');
 
         $helperData = ModelHelper::where(['user_id_helper' => $request->input('user_id_helper')])->first();
-        $penumpangData = ModelPenumpang::where(['user_id_penumpang' => $request->input('user_id_penumpang')])->first();
+        
+        // $penumpangData = ModelPenumpang::where(['user_id_penumpang' => $request->input('user_id_penumpang')])->first();
+        $penumpangData = ModelPenumpang::where(['telp_penumpang' => $request->input('user_id_penumpang')])->first();
+
+        $naikbusData->user_id_penumpang = $penumpangData->user_id_penumpang;
 
         if($penumpangData->sticker_penumpang >= $naikbusData->sticker_naikbus){
             $penumpangData->sticker_penumpang = $penumpangData->sticker_penumpang - $request->input('sticker_naikbus');

@@ -46,6 +46,39 @@ class PenumpangController extends Controller
             return response()->json($response);
     }
 
+    public function profileByPhone(Request $request) {
+        $userId = $request->input('user_id');
+        
+        if(is_null($userId)){
+            $response = [
+                    'code' => 400,
+                    'message' => 'Parameter tidak boleh kosong',
+                    'success' => false,
+                    
+                ];
+            return response()->json($response);
+        }
+
+        $penumpang = ModelPenumpang::where(['telp_penumpang' => $userId])->first();
+        $penumpangData = $penumpang;
+        $penumpangData = collect($penumpangData)->toArray();
+
+        $userData = $penumpang->get_user;
+
+        $response = [
+            'code' => 200,
+            'message' => 'Get Data Berhasil',
+            'success' => true,
+            'data' => [
+                'penumpang' => $penumpangData,
+                'user' => $userData
+            ]
+            
+        ];
+
+        return response()->json($response);
+    }
+
     //data untuk halaman history tukarsampah
     public function historytukarsampah(Request $request) {
         $userId = $request->input('user_id');

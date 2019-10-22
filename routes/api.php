@@ -5,6 +5,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/penumpang/profile','Api\PenumpangController@profile');
+Route::get('/penumpang/profilePhone','Api\PenumpangController@profileByPhone');
 Route::get('/penumpang/historytukarsampah','Api\PenumpangController@historytukarsampah');
 Route::get('/penumpang/historynaikbus','Api\PenumpangController@historynaikbus');
 

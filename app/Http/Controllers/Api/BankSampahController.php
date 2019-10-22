@@ -27,7 +27,7 @@ class BankSampahController extends Controller
     public function tukarsampah(Request $request)
     {   
         $tukarsampahData = new ModelTukarSampah();
-        $tukarsampahData->user_id_penumpang = $request->input('user_id_penumpang'); 
+        // $tukarsampahData->user_id_penumpang = $request->input('user_id_penumpang'); 
         $tukarsampahData->user_id_banksampah = $request->input('user_id_banksampah'); 
         $tukarsampahData->sticker_tukarsampah = $request->input('sticker_tukarsampah');
         $tukarsampahData->botolbesar_tukarsampah = $request->input('botolbesar_tukarsampah');
@@ -39,7 +39,11 @@ class BankSampahController extends Controller
         $banksampahData = ModelBankSampah::where(['user_id_banksampah' => $request->input('user_id_banksampah')])->first();
                
         //menampilkan sticker penumpang 
-        $penumpangData = ModelPenumpang::where(['user_id_penumpang' => $request->input('user_id_penumpang')])->first();
+        
+        // $penumpangData = ModelPenumpang::where(['user_id_penumpang' => $request->input('user_id_penumpang')])->first();
+        $penumpangData = ModelPenumpang::where('telp_penumpang', $request->input('user_id_penumpang'))->first();
+
+        $tukarsampahData->user_id_penumpang = $penumpangData->user_id_penumpang;
 
         if($banksampahData->sticker_banksampah >= $tukarsampahData->sticker_tukarsampah){
             $penumpangData->sticker_penumpang = $penumpangData->sticker_penumpang + $request->input('sticker_tukarsampah');
